@@ -77,3 +77,36 @@
 }
 
 ````
+
+## React
+
+### Структура компонента
+
+````Shell
+/componentName
+  index.js
+  componentName.js
+  componentName.less
+  somponentName_sub1.js
+  somponentName_sub2.less
+  somponentName_sub2.js
+  somponentName_sub2.less
+````
+
+index.js
+````JavaScript
+export * from './componentName.js'
+export * from './somponentName_sub1.js'
+export * from './somponentName_sub2.js'
+````
+
+componentName.js
+````JavaScript
+import React from 'react'
+
+export function (props) {
+  return (
+    <div className="componentName">{props.children}</div>
+  )
+}
+````
