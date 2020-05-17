@@ -118,6 +118,7 @@ import React from 'react'
  * @param props
  * @param props.children
  * @return {any}
+ */
 export function ComponentName(props) {
   return (
     <div className="componentName">{props.children}</div>
@@ -134,6 +135,7 @@ import React from 'react'
  * @param props
  * @param props.children
  * @return {any}
+ */
 export function ComponentName_sub1(props) {
   return (
     <div className="componentName_sub1">{props.children}</div>
