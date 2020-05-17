@@ -82,6 +82,15 @@
 
 ### Структура компонента
 
+Общее
+- Компонент может содержать и экспортировать подкомпоненты
+- Каждый компонент сразу должен быть задокументирован в JSDoc без комментариев нельзя комитить компоненты
+- Для создания компонентов нужно использовать только полные функции а не классы или стрелочные функции
+- Имя функции компонента, как требует Реакт дается в PascalCse
+- Имена файлов и css-классов в компоненте в camelCase
+- Подкомпонент отделяется от компонента _ и называются в camelCase
+
+Структура файлов в компоненте
 ````Shell
 /componentName
   index.js
@@ -109,14 +118,14 @@ import React from 'react'
  * @param props
  * @param props.children
  * @return {any}
-export function componentName(props) {
+export function ComponentName(props) {
   return (
     <div className="componentName">{props.children}</div>
   )
 }
 ````
 
-componentName.js
+componentName_sub1.js
 ````JavaScript
 import React from 'react'
 
@@ -125,7 +134,7 @@ import React from 'react'
  * @param props
  * @param props.children
  * @return {any}
-export function componentName_sub1(props) {
+export function ComponentName_sub1(props) {
   return (
     <div className="componentName_sub1">{props.children}</div>
   )
