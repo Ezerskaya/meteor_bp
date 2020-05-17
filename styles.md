@@ -46,7 +46,7 @@
   
   // Typography
   font-family: sans;
-  line-height: 2remж
+  line-height: 2rem;
   
   // Background & Foreground
   background-color: red;
