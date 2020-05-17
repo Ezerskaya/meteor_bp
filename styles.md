@@ -46,10 +46,10 @@
   
   // Typography
   font-family: sans;
-  line-height: 2rem
+  line-height: 2remж
   
-  // Colors
-  background: red;
+  // Background & Foreground
+  background-color: red;
   
   // Misc
   box-shadow: 2px 2px 2px #ccc;
