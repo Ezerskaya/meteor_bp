@@ -104,9 +104,30 @@ componentName.js
 ````JavaScript
 import React from 'react'
 
-export function (props) {
+/**
+ * Component description
+ * @param props
+ * @param props.children
+ * @return {any}
+export function componentName(props) {
   return (
     <div className="componentName">{props.children}</div>
+  )
+}
+````
+
+componentName.js
+````JavaScript
+import React from 'react'
+
+/**
+ * Sub Component description
+ * @param props
+ * @param props.children
+ * @return {any}
+export function componentName_sub1(props) {
+  return (
+    <div className="componentName_sub1">{props.children}</div>
   )
 }
 ````
