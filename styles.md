@@ -40,6 +40,8 @@
   display: flex;
   width: 0;
   height: auto;
+  padding: 1rem;
+  margin: 1rem;
   border: 1px solid red;
   
   // Flex
