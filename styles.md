@@ -80,9 +80,31 @@
 
 ````
 
-## React
+## [React](#react)
 
-### Структура компонента
+### [Правила работы над компонентом](#react-com-dev-rules)
+- Компонент нельзя комитить без документации
+- Доработкой компонента может заниматься только его автор указаный в @author
+- Версия указывается в формате XX.YY.ZZZZ https://semver.org
+- Если YY в версии = 0, значит это прототип и использовать его может только автор
+- Если нужно увеличть XX - новая версия компонета с потерей совместимости, то новй компонент должен называться ComponentName2 а старая версия помечена как @deprecated, соответственно для разработки версии с потерей совместимости нужно создать отдельный компонент, чтобы старый все еще можно было использовать до официальной миграции, после миграции и удаления старого компонента новый может быть избавлен от версии в названии
+- Если автор недоступен, то должен быть добавлен или соавтор или изменен основной автор
+- Если версия модуля, компонента или подкомпонентов 
+
+Пример документации компонента 
+````JavaScript
+/** ComponentName to use like this and this
+ *  @module ComponentName
+ *  @author username
+ *  @version 0.0.1
+ */
+ 
+ import React from 'react'
+ 
+ ...
+````
+
+### [Структура компонента](#react-com-structure)
 
 Общее
 - Компонент может содержать и экспортировать подкомпоненты
@@ -113,13 +135,18 @@ export * from './somponentName_sub2.js'
 
 componentName.js
 ````JavaScript
+/** ComponentName to use like this and this
+ *
+ *  @author username
+ *  @version 0.0.1
+ */
+ 
 import React from 'react'
 
-/**
- * Component description
- * @param props
- * @param props.children
- * @return {any}
+/** Component description
+ *  @param props
+ *  @param props.children
+ *  @return {any}
  */
 export function ComponentName(props) {
   return (
@@ -132,11 +159,10 @@ componentName_sub1.js
 ````JavaScript
 import React from 'react'
 
-/**
- * Sub Component description
- * @param props
- * @param props.children
- * @return {any}
+/** Sub Component description
+ *  @param props
+ *  @param props.children
+ *  @return {any}
  */
 export function ComponentName_sub1(props) {
   return (
