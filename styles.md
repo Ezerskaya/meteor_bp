@@ -39,7 +39,9 @@
   // Box
   display: flex;
   width: 0;
+  max-width: 80ch;
   height: auto;
+  max-height: 100%;
   padding: 1rem;
   margin: 1rem;
   border: 1px solid red;
